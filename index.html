@@ -5,21 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For You, My Love</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #ffeeef; color: #333; text-align: center; padding: 20px; }
-        h1 { color: #c2185b; }
-        p { font-size: 1.2em; }
-        .heart { color: #c2185b; font-size: 2em; }
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #ff9a9e, #fad0c4); color: #333; text-align: center; padding: 20px; margin: 0; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+        .card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 40px rgba(0,0,0,0.2); animation: fadeIn 2s ease-in-out; max-width: 500px; }
+        h1 { color: #ff4e50; margin-bottom: 10px; }
+        h2 { color: #c2185b; }
+        p { font-size: 1.2em; line-height: 1.6; }
+        .heart { color: #ff4e50; font-size: 3em; animation: heartbeat 1s infinite; display: inline-block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff4e50;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #e63e40;
+        }
     </style>
 </head>
 <body>
-    <h1>Happy Valentine's Day!</h1>
-    <p class="heart">❤️</p>
-    <p>On this special day, I want to remind you how much you mean to me.</p>
-    <p>Every moment spent with you is a treasure, and I cherish our love every day.</p>
-    <h2>Happy Anniversary!</h2>
-    <p>As we celebrate our journey together, I look forward to making more memories with you.</p>
-    <p>Thank you for being my partner, my confidant, and my greatest love.</p>
-    <p>Forever yours,</p>
-    <p>[Your Name]</p>
+    <div class="card">
+        <p class="heart">❤️</p>
+        <h1>Happy Valentine's Day & Anniversary!</h1>
+        <p>On this special day, I want to remind you how much you mean to me.</p>
+        <p>Every moment spent with you is a treasure, and I cherish our love every day.</p>
+        <h2>Happy Anniversary!</h2>
+        <p>As we celebrate our journey together, I look forward to making more memories with you.</p>
+        <p>Thank you for being my partner, my confidant, and my greatest love.</p>
+        <p>Forever yours,</p>
+        <p style="font-size: 1.5em; color: #ff4e50;">💖 YOUR BUGGU 💖</p>
+        <button onclick="showSurprise()">Click for a Surprise 💌</button>
+    </div>
+
+    <script>
+        function showSurprise() {
+            alert("Kirti, you are my today and all of my tomorrows. I love you! 💍❤️");
+        }
+    </script>
 </body>
 </html>
